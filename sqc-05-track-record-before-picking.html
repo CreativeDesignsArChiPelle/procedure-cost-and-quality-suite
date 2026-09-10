@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Before you pick a surgeon, see their public track record. — SurgeonQualityCheck</title>
+<meta name="description" content="A referral tells you someone had a good experience. Public outcomes data tells you what actually happened, across every patient it was reported for.">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18439144235"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18439144235');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14262B;
+  --muted:#55696D;
+  --paper:#FEFCF9;
+  --card:#F1ECE3;
+  --rule:#E4DED2;
+  --accent-100:#EBEEF5;
+  --accent-300:#A6B7D9;
+  --accent-500:#4063AA;
+  --accent-700:#162542;
+  --flag:#A8461F;
+  --flag-tint:#F5E8E1;
+  --focus:#2B7A85;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Source Serif 4',Georgia,serif;font-weight:600;margin:0;letter-spacing:-.01em}
+a{color:inherit}
+img,svg{display:block}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+
+/* ---------- header ---------- */
+header.top{border-bottom:1px solid var(--rule);background:var(--paper)}
+.top-inner{max-width:1120px;margin:0 auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Source Serif 4',serif;font-weight:600;font-size:19px}
+.brand .mark{width:30px;height:30px;border-radius:8px;background:var(--accent-700);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.brand .mark svg{width:17px;height:17px}
+.brand b{color:var(--accent-700)}
+nav.top-links{display:flex;gap:28px;font-size:14.5px;color:var(--muted)}
+nav.top-links a{text-decoration:none}
+nav.top-links a:hover{color:var(--ink)}
+@media (max-width:640px){nav.top-links{display:none}}
+
+/* ---------- hero ---------- */
+.hero{padding:64px 0 56px}
+.hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:start}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px}}
+
+.eyebrow{display:inline-flex;align-items:center;gap:7px;background:var(--accent-100);color:var(--accent-700);font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:7px 13px;border-radius:100px;margin-bottom:22px}
+.eyebrow svg{width:13px;height:13px}
+
+h1{font-size:44px;line-height:1.14;color:var(--ink);max-width:15ch}
+@media (max-width:640px){h1{font-size:32px}}
+
+.hero-sub{margin:20px 0 0;font-size:17.5px;color:var(--muted);max-width:46ch;line-height:1.6}
+
+.trust-list{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-direction:column;gap:11px}
+.trust-list li{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--ink)}
+.trust-list svg{width:18px;height:18px;flex-shrink:0;margin-top:1px;color:var(--accent-700)}
+
+.hero-form{margin-top:30px;display:flex;gap:10px;max-width:440px;flex-wrap:wrap}
+.hero-form input[type=email]{flex:1 1 220px;min-width:0;padding:13px 16px;border:1.5px solid var(--rule);border-radius:9px;font-size:15px;font-family:inherit;background:#fff;color:var(--ink)}
+.hero-form input[type=email]:focus{border-color:var(--focus)}
+.hero-form button{padding:13px 22px;border:none;border-radius:9px;background:var(--accent-700);color:#fff;font-size:15px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .15s ease}
+.hero-form button:hover{background:#0D2F34}
+.form-fine{margin:11px 0 0;font-size:12.5px;color:var(--muted)}
+.form-fine b{color:var(--ink)}
+
+.err-msg{display:none;margin-top:10px;font-size:13.5px;color:var(--flag)}
+.err-msg.show{display:block}
+.ok-msg{display:none;margin-top:16px;align-items:center;gap:10px;font-size:15px;color:var(--accent-700);font-weight:600}
+.ok-msg.show{display:flex}
+.ok-msg svg{width:20px;height:20px;flex-shrink:0}
+.ok-msg svg path{stroke-dasharray:24;stroke-dashoffset:24;animation:draw .4s ease forwards .1s}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* ---------- sample comparison card ---------- */
+.sample-card{background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:26px 26px 22px}
+.sample-tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);background:#fff;border:1px solid var(--rule);border-radius:100px;padding:4px 10px;margin-bottom:16px}
+.sample-proc{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:2px}
+.sample-loc{font-size:13px;color:var(--muted);margin-bottom:20px}
+
+.bar-row{margin-bottom:16px;position:relative}
+.bar-row:last-child{margin-bottom:0}
+.bar-label-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;gap:10px}
+.bar-name{font-size:13.5px;color:var(--ink);font-weight:500}
+.bar-value{font-size:14.5px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+.bar-track{background:#fff;border:1px solid var(--rule);border-radius:6px;height:14px;overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:5px;background:var(--accent-500);transform:scaleX(0);transform-origin:left center;animation:grow .8s cubic-bezier(.22,.7,.3,1) forwards}
+.bar-fill.flag{background:var(--flag)}
+.bar-row.flag .bar-value{color:var(--flag)}
+.bar-flag-note{font-size:12px;color:var(--flag);margin-top:5px;font-weight:600}
+@keyframes grow{to{transform:scaleX(1)}}
+.bar-row:hover .bar-track{border-color:var(--accent-500)}
+.bar-row.flag:hover .bar-track{border-color:var(--flag)}
+
+.sample-foot{margin-top:20px;padding-top:16px;border-top:1px solid var(--rule);font-size:12.5px;color:var(--muted)}
+
+/* ---------- STAT module ---------- */
+.stat-kicker{font-size:12.5px;font-weight:600;letter-spacing:.04em;color:var(--muted);text-transform:uppercase;margin-bottom:14px}
+.stat-big{font-family:'Source Serif 4',serif;font-size:56px;font-weight:600;color:var(--accent-700);line-height:1;margin-bottom:10px}
+.stat-label{font-size:14.5px;color:var(--ink);line-height:1.55;max-width:38ch;margin-bottom:22px}
+.stat-rows{border-top:1px solid var(--rule);padding-top:16px;display:flex;flex-direction:column;gap:11px}
+.stat-row{display:flex;justify-content:space-between;gap:14px;font-size:13.5px}
+.stat-row span:first-child{color:var(--muted)}
+.stat-row span:last-child{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums;text-align:right}
+
+/* ---------- LIST module ---------- */
+.line-list{list-style:none;margin:0;padding:0}
+.line-item{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 14px;border-radius:9px;font-size:14px;margin-bottom:6px}
+.line-item:not(.flag){background:#fff;border:1px solid var(--rule)}
+.line-item.flag{background:var(--flag-tint);border:1px solid var(--flag)}
+.li-name{color:var(--ink)}
+.line-item.flag .li-name{color:var(--flag);font-weight:600}
+.li-amt{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.line-item.flag .li-amt{color:var(--flag)}
+
+
+/* ---------- proof strip ---------- */
+.proof-strip{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--card)}
+.proof-inner{max-width:1120px;margin:0 auto;padding:18px 28px;display:flex;flex-wrap:wrap;gap:24px 36px;justify-content:center;font-size:13.5px;color:var(--muted)}
+.proof-inner span{display:flex;align-items:center;gap:8px}
+.proof-inner svg{width:15px;height:15px;color:var(--accent-700);flex-shrink:0}
+
+/* ---------- sections ---------- */
+.section{padding:64px 0}
+.section-eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-700);margin-bottom:10px}
+.section h2{font-size:29px;color:var(--ink);max-width:26ch;margin-bottom:0}
+.section-sub{margin-top:12px;font-size:16px;color:var(--muted);max-width:56ch;line-height:1.6}
+
+.steps{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+@media (max-width:800px){.steps{grid-template-columns:1fr}}
+.step{padding-top:2px}
+.step-num{width:32px;height:32px;border-radius:50%;background:var(--accent-100);color:var(--accent-700);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.step h3{font-family:'Inter',sans-serif;font-size:16.5px;font-weight:600;margin-bottom:8px}
+.step p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.6}
+
+.founder{background:var(--card);border-radius:16px;padding:34px 36px;margin-top:8px;display:flex;gap:20px;align-items:flex-start}
+.founder .quote-mark{font-family:'Source Serif 4',serif;font-size:44px;color:var(--accent-300);line-height:1;flex-shrink:0;margin-top:-6px}
+.founder p{margin:0;font-size:16px;color:var(--ink);line-height:1.7;max-width:66ch}
+
+.notbox{border:1px solid var(--rule);border-radius:12px;padding:22px 24px;margin-top:8px;background:#fff}
+.notbox p{margin:0 0 12px;font-size:14.5px;color:var(--muted);line-height:1.65}
+.notbox p:last-child{margin-bottom:0}
+.notbox b{color:var(--ink)}
+
+/* ---------- final cta ---------- */
+.final-cta{background:var(--accent-700);color:#fff;border-radius:20px;padding:48px 40px;text-align:center;margin:0 28px}
+@media (max-width:640px){.final-cta{padding:36px 24px}}
+.final-cta h2{color:#fff;font-size:27px;max-width:22ch;margin:0 auto 22px}
+.final-cta .hero-form{justify-content:center;margin:0 auto}
+.final-cta .hero-form input[type=email]{border-color:transparent}
+.final-cta .hero-form button{background:#fff;color:var(--accent-700)}
+.final-cta .hero-form button:hover{background:var(--accent-100)}
+.final-cta .form-fine{color:rgba(255,255,255,.75)}
+.final-cta .form-fine b{color:#fff}
+.final-cta .err-msg{color:#FFD9C4}
+
+/* ---------- footer ---------- */
+footer{padding:40px 28px 56px;text-align:center;font-size:13px;color:var(--muted)}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .bar-fill{animation:none;transform:scaleX(1)}
+  #ok svg path{animation:none;stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+      Surgeon<b>QualityCheck</b>
+    </div>
+    <nav class="top-links">
+      <a href="#how">How it works</a>
+      <a href="#not">What this is not</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>PUBLIC HOSPITAL QUALITY DATA</span>
+      <h1>Before you pick a surgeon, see their public track record.</h1>
+      <p class="hero-sub">A referral tells you someone had a good experience. Public outcomes data tells you what actually happened, across every patient it was reported for.</p>
+
+      <ul class="trust-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Built on public hospital outcomes reporting</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Not affiliated with any hospital or surgeon</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Track-record data only — not medical advice</li>
+      </ul>
+
+      <form class="hero-form" id="heroForm" novalidate>
+        <input type="email" id="heroEmail" placeholder="you@email.com" autocomplete="email">
+        <button type="submit">Check the track record</button>
+      </form>
+      <div id="heroErr" class="err-msg"></div>
+      <p class="form-fine"><b>$0</b> to check · report in about an hour · cancel anytime</p>
+      <div id="heroOk" class="ok-msg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>You're on the list — check your inbox shortly.</div>
+    </div>
+
+    <div class="sample-card reveal">
+      <span class="sample-tag">Sample report</span>
+      <div class="stat-kicker">Rotator cuff repair, this facility</div>
+      <div class="stat-big">94%</div>
+      <div class="stat-label">of patients reported no complications, in line with the regional average of 95%</div>
+      <div class="stat-rows">
+        <div class="stat-row"><span>This facility</span><span>94% no-complication rate</span></div>
+        <div class="stat-row"><span>Regional average</span><span>95%</span></div>
+        <div class="stat-row"><span>Procedures reported</span><span>112 in the past year</span></div>
+      </div>
+      <div class="sample-foot" style="margin-top:18px;padding-top:14px">A reassuring track record still deserves the same check — the point is knowing, not guessing. Illustrative example.</div>
+    </div>
+  </div>
+</section>
+
+<div class="proof-strip">
+  <div class="proof-inner">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg>CMS hospital outcomes data</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Report in about an hour</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/></svg>Not affiliated with any provider</span>
+  </div>
+</div>
+
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-eyebrow">Process</div>
+      <h2>How it works</h2>
+      <p class="section-sub">No login, no insurance card, no phone calls to a billing office. Just the procedure and your zip code.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Tell us the procedure</h3>
+        <p>The procedure name or CPT code, plus your zip code or the specific hospital you’re considering.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>We read the public record</h3>
+        <p>Complication rates, readmission rates, and procedure volume are publicly reported per hospital, per procedure. We pull the exact figures.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>You get the track record</h3>
+        <p>A plain comparison of nearby providers on this exact procedure, in about an hour, with anything notably worse than average flagged.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="founder reveal">
+      <span class="quote-mark">&ldquo;</span>
+      <p>A relative was choosing between two hospitals for the same operation, and picked the one with the nicer lobby. It turned out to have a complication rate for that exact procedure nearly three times the other one's — a number sitting in a public CMS dataset the whole time. We built SurgeonQualityCheck so the number you can't see in a lobby is the one you see first.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0" id="not">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="section-eyebrow">Read this first</div>
+      <h2>What this is not</h2>
+    </div>
+    <div class="notbox reveal">
+      <p>We are not a hospital, surgeon, insurer, or medical provider, and nothing here is medical advice. We surface public outcomes data so you can ask better questions and compare options.</p>
+      <p><b>A track record is not a guarantee.</b> Public outcomes data reflects past results across a hospital’s or surgeon’s patients generally, adjusted at a population level — it does not predict any individual outcome, and small sample sizes for rare procedures can make single-year figures noisy.</p>
+      <p><b>Always discuss directly</b> with your doctor and the facility, and use this to compare options and ask informed questions — not as a substitute for medical judgment.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="final-cta reveal">
+    <h2>Check the track record before you decide.</h2>
+    <form class="hero-form" id="finalForm" novalidate>
+      <input type="email" id="finalEmail" placeholder="you@email.com" autocomplete="email">
+      <button type="submit">Check the track record</button>
+    </form>
+    <div id="finalErr" class="err-msg"></div>
+    <p class="form-fine"><b>$0</b> to check · report in about an hour · cancel anytime</p>
+    <div id="finalOk" class="ok-msg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>You're on the list — check your inbox shortly.</div>
+  </div>
+</section>
+
+<footer>SurgeonQualityCheck · Built on publicly reported CMS hospital outcomes data · Variant 05</footer>
+
+<script>
+(function(){
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // ---- real tracking (same Google Ads + Sheets accounts as HomeownerProjectSuite / CollegeFundingSuite) ----
+  var GOOGLE_ADS_ID = 'AW-18439144235';
+  var CONVERSION_LABEL = 'riYuCNv3z_EcEKuGvNhE';
+  var SHEETS_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycby0dU9kochoBVweAJe19L0TpgOYSUfZZ5G-JO4yvAyrcT9wJV4pID_81YaGMTqA5b8S/exec';
+
+  function wireForm(formId, emailId, errId, okId){
+    var form = document.getElementById(formId);
+    var input = document.getElementById(emailId);
+    var errBox = document.getElementById(errId);
+    var ok = document.getElementById(okId);
+    if(!form) return;
+    form.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var v = input.value.trim();
+      if(!EMAIL_RE.test(v)){
+        errBox.textContent = 'Enter a valid email address.';
+        errBox.classList.add('show');
+        return;
+      }
+      errBox.classList.remove('show');
+      if(SHEETS_WEBHOOK_URL && SHEETS_WEBHOOK_URL.indexOf('PASTE_YOUR') === -1){
+        fetch(SHEETS_WEBHOOK_URL, {method:'POST', mode:'no-cors', body:new URLSearchParams({
+          email:v, page:location.pathname, form:formId, referrer:document.referrer
+        })}).catch(function(){});
+      }
+      if(typeof gtag === 'function' && GOOGLE_ADS_ID.indexOf('REPLACE_ME') === -1 && CONVERSION_LABEL.indexOf('REPLACE_ME') === -1){
+        gtag('event', 'conversion', {'send_to': GOOGLE_ADS_ID + '/' + CONVERSION_LABEL});
+      }
+      form.style.display = 'none';
+      ok.classList.add('show');
+    });
+  }
+  wireForm('heroForm','heroEmail','heroErr','heroOk');
+  wireForm('finalForm','finalEmail','finalErr','finalOk');
+
+  // ---- scroll reveal ----
+  var els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:.15, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    els.forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+
+</body></html>
